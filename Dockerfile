@@ -11,5 +11,7 @@ RUN useradd --create-home action
 USER action
 WORKDIR /app
 COPY app .
+RUN python -c "import compileall; compileall.compile_path(maxlevels=10)"
+RUN python -m compileall app/thing
 ENV PYTHONFAULTHANDLER=1
 ENTRYPOINT ["tini", "--", "python", "-m", "thing"]
