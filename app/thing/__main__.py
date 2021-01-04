@@ -14,7 +14,7 @@ async def fetch_status(session: ClientSession, url: str) -> int:
 async def main(urls):
     session_timeout = aiohttp.ClientTimeout(total=1, connect=.1)
     async with aiohttp.ClientSession(timeout=session_timeout) as session:
-        tasks = [fetch_status_code(session, url) for url in urls] 
+        tasks = [fetch_status(session, url) for url in urls] 
         results = await asyncio.gather(*tasks, return_exceptions=True)
         exceptions = [res for res in results if isinstance(res, Exception)] 
         successful_results = [res for res in results if not isinstance(res, Exception)]
