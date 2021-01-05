@@ -6,8 +6,8 @@ import aiohttp
 from aiohttp import ClientSession
 
 BATCH_TOTAL_TIMEOUT_SECS = float(os.getenv("BATCH_TOTAL_TIMEOUT_SECS", 1.))
-BATCH_CONNECT_TIMEOUT_SECS = float(os.getenv("BATCH_TOTAL_TIMEOUT_SECS", .1))
-BATCH_GET_TIMEOUT_SECS = float(os.getenv("BATCH_TOTAL_TIMEOUT_SECS", 1.))
+BATCH_CONNECT_TIMEOUT_SECS = float(os.getenv("BATCH_CONNECT_TIMEOUT_SECS", .1))
+BATCH_GET_TIMEOUT_SECS = float(os.getenv("BATCH_GET_TIMEOUT_SECS", 1.))
 
 
 async def fetch_status(session: ClientSession, url: str) -> int:
