@@ -1,3 +1,4 @@
+"""Example of retrieving status or fetch fails in oreder using async io."""
 import asyncio
 import os
 import sys
