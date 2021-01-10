@@ -2,7 +2,7 @@
 Experimental example for python status fetch application in docker.
 
 ## Status
-Prototyping.
+Experimental
 
 ## Synopsis
 ```bash
